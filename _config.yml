@@ -22,7 +22,7 @@ repository               : "omar-emara/omar-emara.github.io"
 author:
   # Biographic information
   avatar           : "profile_picture.jpeg"
-  name             : "Your Sidebar Name"
+  name             : "Omar Emara"
   pronouns         : # example: "she/her"  
   bio              : "Computer Vision PhD researcher focusing on multimodal video understanding in egocentric data with work experience in the industry and academia in applied and research machine learning roles."
   location         : "Bristol"
@@ -42,7 +42,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "omar-emara"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -56,7 +56,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : omar-emara-1747aa163
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
