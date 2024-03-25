@@ -12,7 +12,8 @@ redirect_from:
 Education
 ======
 * PhD CDT Interactive AI, 2023-2027
-* MSc. Systems, Control& Signal Processing, 2019-2020
+* MSc. Computational Finance, 2020-2021
+* MSc. Systems, Control & Signal Processing, 2019-2020
 * BEng Electromechanical Engineering, 2016-2019
 
 Work experience
@@ -22,6 +23,8 @@ Work experience
 * Machine Learning Specialist, Crossflow Payments, London, October 2020 - February 2023
 
 * Signal Processing Research Assistant, University of Southampton, June - August 2019
+
+* Robotics and Motion Intern, ABB, Cairo, August - September 2018
   <!-- * Supervisor: Professor Git -->
   
   
