@@ -18,7 +18,12 @@ Education
 
 Work experience
 ======
-* Machine Learning Research Assistant, University of Southampton, May-August 2023
+
+* Teaching Assistant, University of Bristol, September 2024 - ongoing
+
+* WP Tutor, University of Bristol, October 2023 - ongoing
+
+* Machine Learning Research Assistant, University of Southampton, May - August 2023
 
 * Machine Learning Specialist, Crossflow Payments, London, October 2020 - February 2023
 
@@ -30,12 +35,15 @@ Work experience
   
 Skills
 ======
-* Python
+* Computer vision
 * Machine Learning
 * Deep Learning
+* Python
+* Data Science
 * Pytorch
-* Keras
-* AWS
+* Data structure and algorithms
+* NLP
+* XAI
 
 <!-- Publications
 ======
