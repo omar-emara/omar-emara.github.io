@@ -3,7 +3,7 @@ title: "HD-EPIC: A Highly-Detailed Egocentric Video Dataset"
 collection: publications
 permalink: /publication/2009-10-01-paper-title-number-1
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2025
+# date: 2025
 venue: 'CVPR'
 paperurl: 'https://arxiv.org/abs/2502.04144'
 citation: 'T Perrett, A Darkhalil, S Sinha, O Emara, S Pollard, K Parida, K Liu, P Gatti, S Bansal, K Flanagan, J Chalk, Z Zhu, R Guerrier, F Abdelazim, B Zhu, D Moltisanti, M Wray, H Doughty, D Damen (2025). HD-EPIC: A Highly-Detailed Egocentric Video Dataset. IEEE/CVF Computer Vision and Pattern Recognition (CVPR'
