@@ -19,7 +19,7 @@ author_profile: true
         [<a href="https://hd-epic.github.io/demo.html">Explore Dataset</a>]
       </li>
       <li>
-        J Pope, M. Hassanuzzaman, W. Chapman, H Day, M. Sherpa, O Emara, N. Adhikari, A Joshi (2024). 
+        J Pope, M Hassanuzzaman, W Chapman, H Day, M Sherpa, O Emara, N Adhikari, A Joshi (2024). 
         Frontiers in Digital Health, under review. Skin Cancer Machine Learning Model Tone Bias. arXiv preprint, arXiv:2410.06385. 
         [<a href="https://arxiv.org/abs/2410.06385">Paper</a>]
       </li>
