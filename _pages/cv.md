@@ -18,6 +18,7 @@ Education
 
 Work experience
 ======
+* AI Course Development Assistant, University of Bristol, May - July 2025
 
 * Teaching Assistant, University of Bristol, September 2024 - ongoing
 
@@ -35,6 +36,7 @@ Work experience
   
 Skills
 ======
+* Multimodal Learning
 * Computer vision
 * Machine Learning
 * Deep Learning
