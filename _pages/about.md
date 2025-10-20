@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a second year PhD student in Computer Vision supervised by Professor Dima Damen and funded by UKRI. My research is focused on addressing challenging problems in multimodal learning in the egocentric domain. Moreover, I have experience working as an applied machine learning scientist in the industry and working as research assistant in academia for a total of 3 years. I worked on several projects including training computer vision systems for an autonomous mapping vehicle and a robotic arm. 
+I am a second year PhD student in Computer Vision supervised by [Professor Dima Damen](https://dimadamen.github.io/contact.html) and funded by UKRI. My research is focused on addressing challenging problems in multimodal learning in the egocentric domain. Moreover, I have experience working as an applied machine learning scientist in the industry and working as research assistant in academia for a total of 3 years. I worked on several projects including training computer vision systems for an autonomous mapping vehicle and a robotic arm. 
 
 <!-- A data-driven personal website
 ======
