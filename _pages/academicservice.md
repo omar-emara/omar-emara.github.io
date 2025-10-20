@@ -8,8 +8,9 @@ author_profile: true
 {% include base_path %}
 
 CVPR Reviewer 2026
+
 EPIC Kitchens Challenge CVPR (2025-ongoing)
-* Mointored and maintained team regestiartions 
+* Mointored and maintained team registrations 
 * Reviewed reports submitted for the audio challenge 
 * Provided feedback to authors
 
