@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
  
-I am a third year PhD student supervised by [Professor Dima Damen](https://dimadamen.github.io/contact.html) and funded by UKRI. My research is focused on addressing challenging problems in multimodal learning domain with emphasis on utilising audio to improve video understanding downstream tasks. 
+I am a third year PhD student supervised by [Professor Dima Damen](https://dimadamen.github.io/contact.html) and funded by UKRI. My research is focused on addressing challenging problems in multimodal learning to improve video understanding downstream tasks. 
 
 Moreover, I have experience working as an applied machine learning scientist in the industry and working as research assistant in academia for a total of 3 years. 
 
