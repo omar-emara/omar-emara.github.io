@@ -10,15 +10,15 @@ author_profile: true
     You can also find my publications on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.
     <ul>
       <li>
-        K Parida, <span style="color:red;">O Emara</span>, H Doughty, D Damen (2025). Segmenting Collision Sound Sources in Egocentric Videos. Submitted to ICASSP 2026.
+        K Parida, <span style="color:red;">O Emara</span>, H Doughty, D Damen (2025). Segmenting Collision Sound Sources in Egocentric Videos. arXiv preprint, arXiv:2511.13863.
         [<a href="https://krantiparida.github.io/projects/cs3.html">Webpage</a>]
+        [<a href="https://arxiv.org/pdf/2511.13863">Paper</a>]
       </li>
       <li>
         T Perrett, A Darkhalil, S Sinha, <span style="color:red;">O Emara</span>, S Pollard, K Parida, K Liu, P Gatti, S Bansal, K Flanagan, J Chalk, Z Zhu, R Guerrier, F Abdelazim, B Zhu, D Moltisanti, M Wray, H Doughty, D Damen (2025).
         HD-EPIC: A Highly-Detailed Egocentric Video Dataset. IEEE/CVF Computer Vision and Pattern Recognition (CVPR). 
         [<a href="https://arxiv.org/abs/2502.04144">Paper</a>] 
         [<a href="https://hd-epic.github.io/">Webpage</a>] 
-        [<a href="https://hd-epic.github.io/index#download">Dataset</a>] 
         [<a href="https://github.com/hd-epic/hd-epic-annotations">Annotations</a>] 
         [<a href="https://hd-epic.github.io/demo.html">Explore Dataset</a>]
       </li>

@@ -7,8 +7,6 @@ author_profile: true
 
 {% include base_path %}
 
-CVPR Reviewer 2026
-
 EPIC Kitchens CVPR Challenge Coordinator (2025-ongoing)
 
 <!-- Publications
