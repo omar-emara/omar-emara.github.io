@@ -10,9 +10,9 @@ author_profile: true
     You can also find my publications on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.
     <ul>
       <li>
-        K Parida, <span style="color:red;">O Emara</span>, H Doughty, D Damen (2025). Segmenting Collision Sound Sources in Egocentric Videos. arXiv preprint, arXiv:2511.13863.
+        K Parida, <span style="color:red;">O Emara</span>, H Doughty, D Damen (2026). Segmenting Collision Sound Sources in Egocentric Videos. CVPR Multimodal Learning and Applications Workshop.
         [<a href="https://krantiparida.github.io/projects/cs3.html">Webpage</a>]
-        [<a href="https://arxiv.org/pdf/2511.13863">Paper</a>]
+        [<a href="https://openaccess.thecvf.com/content/CVPR2026W/MULA2026/papers/Parida_Segmenting_Collision_Sound_Sources_in_Egocentric_Video_CVPRW_2026_paper.pdf">Paper</a>]
       </li>
       <li>
         T Perrett, A Darkhalil, S Sinha, <span style="color:red;">O Emara</span>, S Pollard, K Parida, K Liu, P Gatti, S Bansal, K Flanagan, J Chalk, Z Zhu, R Guerrier, F Abdelazim, B Zhu, D Moltisanti, M Wray, H Doughty, D Damen (2025).
@@ -21,11 +21,6 @@ author_profile: true
         [<a href="https://hd-epic.github.io/">Webpage</a>] 
         [<a href="https://github.com/hd-epic/hd-epic-annotations">Annotations</a>] 
         [<a href="https://hd-epic.github.io/demo.html">Explore Dataset</a>]
-      </li>
-      <li>
-        J Pope, M Hassanuzzaman, W Chapman, H Day, M Sherpa, <span style="color:red;">O Emara</span>, N Adhikari, A Joshi (2024). 
-        Frontiers in Digital Health, under review. Skin Cancer Machine Learning Model Tone Bias. arXiv preprint, arXiv:2410.06385. 
-        [<a href="https://arxiv.org/abs/2410.06385">Paper</a>]
       </li>
     </ul>
   </div>
