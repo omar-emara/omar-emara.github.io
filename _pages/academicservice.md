@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-EPIC Kitchens CVPR Challenge Coordinator (2025-ongoing)
+EPIC Kitchens CVPR Challenge Coordinator (2025)
 
 <!-- Publications
 ======
