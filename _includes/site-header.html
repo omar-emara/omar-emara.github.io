@@ -1,0 +1,12 @@
+{% include base_path %}
+<header class="site-header">
+  <nav class="site-header__inner" aria-label="Main">
+    <a class="site-header__name" href="{{ base_path }}/">{{ site.author.name }}</a>
+    <div class="site-header__links">
+      {% for link in site.data.navigation.main %}
+        {% if link.url contains 'http' %}{% assign domain = '' %}{% else %}{% assign domain = base_path %}{% endif %}
+        <a href="{{ domain }}{{ link.url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>{{ link.title }}</a>
+      {% endfor %}
+    </div>
+  </nav>
+</header>

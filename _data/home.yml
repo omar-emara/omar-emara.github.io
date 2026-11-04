@@ -1,0 +1,101 @@
+# Homepage content (rendered by _layouts/home.html).
+# Any value starting with "TODO" is shown highlighted in yellow on the page so it
+# can't be missed. Replace it with real text, or delete the field to hide it.
+
+status: "TODO: Open to ML research & engineering roles from [MONTH YEAR]"
+
+pitch: "I build multimodal models that combine vision, audio and language to understand video."
+
+# Source: _pages/about.md
+intro: >-
+  Final-year PhD student at the University of Bristol, supervised by
+  <a href="https://dimadamen.github.io/contact.html">Prof. Dima Damen</a> and funded by UKRI.
+  I also have 3 years of applied ML experience, as a machine learning specialist
+  at a FinTech startup and as a research assistant in academia.
+
+# Leave empty until a PDF exists, e.g. "/files/Omar_Emara_CV.pdf".
+# While empty, the CV buttons link to the /cv/ page instead.
+cv_pdf: # TODO: add CV PDF to files/ and set this path
+
+photo: /images/profile-hero.jpg
+
+# Sources: _publications, _pages/publications.md, _pages/cv.md
+themes:
+  - title: "Audio-visual learning"
+    text: "Segmenting the objects that made a collision sound in egocentric video, guided by the audio. Our weakly-supervised method beats competitive baselines by 3× and 4.7× mIoU on two new benchmarks."
+  - title: "Egocentric video understanding"
+    text: "HD-EPIC: 41 hours of unscripted kitchen video with highly detailed, 3D-grounded annotations and a 26K-question VQA benchmark on which Gemini Pro scores only 38.5%."
+  - title: "Applied ML in industry"
+    text: "2+ years as a machine learning specialist at Crossflow Payments (FinTech), and now explainable AI research in collaboration with Allianz."
+    todo: "TODO: add one concrete outcome (what you built and its impact)."
+
+# Source: _pages/cv.md (Education + Work experience), _pages/academicservice.md
+experience:
+  - dates: "2023 – 2027"
+    role: "PhD, CDT in Interactive AI"
+    org: "University of Bristol · Supervised by Prof. Dima Damen · UKRI-funded"
+  - dates: "Aug – Nov 2026"
+    role: "Explainable AI Research Associate"
+    org: "University of Bristol, in collaboration with Allianz"
+    impact: "TODO: one-line outcome"
+  - dates: "May – Jul 2025"
+    role: "AI Course Development Assistant"
+    org: "University of Bristol"
+  - dates: "Sep 2024 – present"
+    role: "Teaching Assistant"
+    org: "University of Bristol"
+  - dates: "Oct 2023 – Oct 2025"
+    role: "Widening Participation Tutor"
+    org: "University of Bristol"
+  - dates: "May – Aug 2023"
+    role: "Machine Learning Research Assistant"
+    org: "University of Southampton"
+    impact: "TODO: research topic / one-line outcome"
+  - dates: "Oct 2020 – Feb 2023"
+    role: "Machine Learning Specialist"
+    org: "Crossflow Payments, London · FinTech startup"
+    impact: "TODO: what you built and its impact"
+  - dates: "Jun – Aug 2019"
+    role: "Signal Processing Research Assistant"
+    org: "University of Southampton"
+  - dates: "Aug – Sep 2018"
+    role: "Robotics and Motion Intern"
+    org: "ABB, Cairo"
+  - dates: "Service"
+    role: "Reviewer, ICLR 2026"
+    org: "EPIC-Kitchens CVPR Challenge Coordinator (2025)"
+
+# Source: _pages/publications.md, paper project pages
+publications:
+  - venue: "CVPR 2026 Workshops (MULA)"
+    title: "Segmenting Collision Sound Sources in Egocentric Videos"
+    authors_before: "Kranti Kumar Parida,"
+    authors_after: ", Hazel Doughty, Dima Damen"
+    takeaway: "Given a collision sound, find which objects in the video made it, even in cluttered first-person footage."
+    image: /images/teasers/cs3.jpg
+    image_alt: "Teaser figure for Collision Sound Source Segmentation"
+    links:
+      - label: "Paper"
+        url: "https://openaccess.thecvf.com/content/CVPR2026W/MULA2026/papers/Parida_Segmenting_Collision_Sound_Sources_in_Egocentric_Video_CVPRW_2026_paper.pdf"
+      - label: "Code"
+        url: "https://github.com/krantiparida/collision-sound-source-segmentation"
+      - label: "Project page"
+        url: "https://krantiparida.github.io/projects/cs3.html"
+  - venue: "CVPR 2025"
+    title: "HD-EPIC: A Highly-Detailed Egocentric Video Dataset"
+    authors_before: "Toby Perrett, Ahmad Darkhalil, Saptarshi Sinha,"
+    authors_after: ", Sam Pollard, Kranti Parida, … Hazel Doughty, Dima Damen (19 authors)"
+    takeaway: "A benchmark that shows how far today's vision-language models are from understanding real, unscripted kitchen video."
+    image: /images/teasers/hd-epic.png
+    image_alt: "HD-EPIC dataset preview"
+    links:
+      - label: "Paper"
+        url: "https://arxiv.org/abs/2502.04144"
+      - label: "Annotations"
+        url: "https://github.com/hd-epic/hd-epic-annotations"
+      - label: "Project page"
+        url: "https://hd-epic.github.io/"
+
+contact:
+  title: "Working on video or multimodal ML?"
+  text: "I'd like to hear about the problem. My CV has the full list of projects and publications."

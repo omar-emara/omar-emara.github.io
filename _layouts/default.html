@@ -11,19 +11,15 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body class="inner">
+    <a class="skip-link" href="#main">Skip to content</a>
 
     {% include browser-upgrade.html %}
-    {% include masthead.html %}
+    {% include site-header.html %}
 
     {{ content }}
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
+    <div class="wrap">{% include site-footer.html %}</div>
 
     {% include scripts.html %}
 

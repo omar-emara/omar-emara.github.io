@@ -1,7 +1,8 @@
 ---
 permalink: /
 title: "Summary"
-author_profile: true
+layout: home
+author_profile: false
 redirect_from: 
   - /about/
   - /about.html

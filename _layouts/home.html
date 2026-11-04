@@ -1,0 +1,115 @@
+---
+layout: compress
+---
+{% include base_path %}
+{% assign h = site.data.home %}
+{% assign a = site.author %}
+{% if h.cv_pdf %}{% assign cv_url = h.cv_pdf | prepend: base_path %}{% assign cv_label = "Download CV" %}{% else %}{% assign cv_url = base_path | append: "/cv/" %}{% assign cv_label = "View CV" %}{% endif %}
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+  <body class="home">
+    <a class="skip-link" href="#main">Skip to content</a>
+    {% include site-header.html %}
+
+    <main id="main">
+      <section id="top" class="home-hero wrap">
+        <div class="home-hero__text">
+          {% if h.status %}
+          <p class="status-pill{% if h.status contains 'TODO' %} todo{% endif %}"><span class="status-pill__dot" aria-hidden="true"></span>{{ h.status }}</p>
+          {% endif %}
+          <h1 class="home-hero__name">{{ a.name }}</h1>
+          <p class="home-hero__pitch">{{ h.pitch }}</p>
+          <p class="home-hero__intro">{{ h.intro }}</p>
+          <div class="btn-row">
+            <a class="b b--primary" href="{{ cv_url }}">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>{{ cv_label }}</a>
+            {% if a.googlescholar %}<a class="b" href="https://scholar.google.com/citations?user=b_4EYk0AAAAJ">Google Scholar</a>{% endif %}
+            {% if a.github %}<a class="b" href="https://github.com/{{ a.github }}">GitHub</a>{% endif %}
+            {% if a.linkedin %}<a class="b" href="https://www.linkedin.com/in/{{ a.linkedin }}">LinkedIn</a>{% endif %}
+            {% if a.email %}<a class="b" href="mailto:{{ a.email }}">Email</a>{% endif %}
+          </div>
+        </div>
+        <img class="home-hero__photo" src="{{ base_path }}{{ h.photo }}" alt="Portrait of {{ a.name }}" width="720" height="971">
+      </section>
+
+      <section id="research" class="band">
+        <div class="wrap stack">
+          <h2 class="section-title">What I work on</h2>
+          <div class="cards">
+            {% for t in h.themes %}
+            <div class="card">
+              <h3>{{ t.title }}</h3>
+              <p>{{ t.text }}</p>
+              {% if t.todo %}<p class="todo">{{ t.todo }}</p>{% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="wrap stack">
+        <h2 class="section-title">Experience</h2>
+        <div class="xp">
+          {% for x in h.experience %}
+          <div class="xp__row">
+            <p class="xp__dates">{{ x.dates }}</p>
+            <div class="xp__body">
+              <h3>{{ x.role }}</h3>
+              <p>{{ x.org }}</p>
+              {% if x.impact %}<p{% if x.impact contains 'TODO' %} class="todo"{% endif %}>{{ x.impact }}</p>{% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section id="publications" class="band">
+        <div class="wrap stack">
+          <div class="section-head">
+            <h2 class="section-title">Selected publications</h2>
+            <a class="arrow-link" href="{{ base_path }}/publications/">All publications<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+          </div>
+          {% for p in h.publications %}
+          <article class="pub">
+            {% if p.image %}
+            <img class="pub__teaser" src="{{ base_path }}{{ p.image }}" alt="{{ p.image_alt }}" loading="lazy">
+            {% else %}
+            <div class="pub__teaser pub__teaser--empty todo">TODO: teaser figure</div>
+            {% endif %}
+            <div class="pub__body">
+              <p class="pub__venue">{{ p.venue }}</p>
+              <h3>{{ p.title }}</h3>
+              <p class="pub__authors">{{ p.authors_before }} <strong>{{ a.name }}</strong>{{ p.authors_after }}</p>
+              <p class="pub__takeaway">{{ p.takeaway }}</p>
+              <div class="btn-row btn-row--sm">
+                {% for l in p.links %}<a class="b b--sm" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section id="contact" class="wrap contact-wrap">
+        <div class="contact">
+          <div class="contact__text">
+            <h2>{{ h.contact.title }}</h2>
+            <p>{{ h.contact.text }}</p>
+          </div>
+          <div class="btn-row">
+            <a class="b b--light" href="mailto:{{ a.email }}">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email me</a>
+            <a class="b b--ghost" href="{{ cv_url }}">{{ cv_label }}</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="wrap">{% include site-footer.html %}</div>
+    {% include scripts.html %}
+  </body>
+</html>
