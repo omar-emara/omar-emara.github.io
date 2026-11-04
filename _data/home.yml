@@ -61,22 +61,28 @@ experience:
   - dates: "August - September 2018"
     role: "Robotics and Motion Intern"
     org: "ABB, Cairo"
-  # Source: _pages/academicservice.md, word for word
-  - dates: "Academic Services"
-    role: "Reviewer, ICLR 2026"
-    org: "EPIC Kitchens CVPR Challenge Coordinator (2025)"
 
-# Source: _pages/cv.md "Education", copied word for word
-# (each line is split into degree / dates, nothing reworded or added).
+# Source: _pages/cv.md "Education", copied word for word.
+# Institution: University of Bristol for the PhD (from about.md / _config.yml).
+# The MSc and BEng institutions are not anywhere in the repo yet.
 education:
   - dates: "2023-2027"
-    role: "PhD CDT Interactive AI"
+    degree: "PhD CDT Interactive AI"
+    institution: "University of Bristol"
   - dates: "2020-2021"
-    role: "MSc. Computational Finance"
+    degree: "MSc. Computational Finance"
+    institution: "TODO: institution"
   - dates: "2019-2020"
-    role: "MSc. Systems, Control & Signal Processing"
+    degree: "MSc. Systems, Control & Signal Processing"
+    institution: "TODO: institution"
   - dates: "2016-2019"
-    role: "BEng Electromechanical Engineering"
+    degree: "BEng Electromechanical Engineering"
+    institution: "TODO: institution"
+
+# Source: _pages/academicservice.md, word for word
+academic_services:
+  - "Reviewer, ICLR 2026"
+  - "EPIC Kitchens CVPR Challenge Coordinator (2025)"
 
 # Source: _pages/publications.md (author, venue and link wording kept as-is).
 # "O Emara" in the author list is highlighted automatically.

@@ -260,3 +260,17 @@ a:focus-visible { outline: 2px solid $rd-accent; outline-offset: 2px; }
   }
   &__fallback { padding: 24px; margin: 0; color: $rd-text-2; }
 }
+
+/* ---- Academic Services (homepage) -------------------------------------- */
+
+#academic-services { padding-top: 72px; gap: 24px; }
+.service-list {
+  list-style: none; margin: 0; padding: 0;
+  li {
+    margin: 0; padding: 20px 0; border-top: 1px solid $rd-border;
+    font-family: $rd-heading; font-size: 18px; font-weight: 700; line-height: 1.35; color: $rd-text;
+    &:last-child { border-bottom: 1px solid $rd-border; }
+  }
+}
+@media (max-width: 600px) { #academic-services { padding-top: 48px; } }
+.xp__body h3 .todo { margin-left: 6px; padding: 0 4px; }
