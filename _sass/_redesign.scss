@@ -159,7 +159,8 @@ a:focus-visible { outline: 2px solid $rd-accent; outline-offset: 2px; }
   p { font-size: 15px; line-height: 1.6; color: $rd-text-2; }
 }
 
-#experience { padding-top: 72px; padding-bottom: 72px; gap: 24px; }
+#experience, #education { padding-top: 72px; padding-bottom: 72px; gap: 24px; }
+#education { padding-top: 0; }
 .xp {
   display: flex; flex-direction: column;
   &__row {
@@ -220,7 +221,8 @@ a:focus-visible { outline: 2px solid $rd-accent; outline-offset: 2px; }
   .home-hero__pitch { font-size: 22px; }
   .home-hero__photo { max-width: 260px; }
   .home .section-title { font-size: 26px; }
-  .home .band > .wrap, #experience { padding-top: 48px; padding-bottom: 48px; }
+  .home .band > .wrap, #experience, #education { padding-top: 48px; padding-bottom: 48px; }
+  #education { padding-top: 0; }
   .contact { padding: 32px 20px; }
   .contact__text h2 { font-size: 24px; }
   .xp__dates { flex-basis: 100%; }

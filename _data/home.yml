@@ -13,9 +13,9 @@ intro: >-
   I also have 3 years of applied ML experience, as a machine learning specialist
   at a FinTech startup and as a research assistant in academia.
 
-# Leave empty until a PDF exists, e.g. "/files/Omar_Emara_CV.pdf".
-# While empty, the CV buttons link to the /cv/ page instead.
-cv_pdf: # TODO: add CV PDF to files/ and set this path
+# TODO: files/Omar_Emara_CV.pdf is currently a blank placeholder page.
+# Replace it with your real CV (keep the same filename).
+cv_pdf: /files/Omar_Emara_CV.pdf
 
 photo: /images/profile-hero.jpg
 
@@ -29,11 +29,8 @@ themes:
     text: "2+ years as a machine learning specialist at Crossflow Payments (FinTech), and now explainable AI research in collaboration with Allianz."
     todo: "TODO: add one concrete outcome (what you built and its impact)."
 
-# Source: _pages/cv.md (Education + Work experience), _pages/academicservice.md
+# Source: _pages/cv.md (Work experience), _pages/academicservice.md
 experience:
-  - dates: "2023 – 2027"
-    role: "PhD, CDT in Interactive AI"
-    org: "University of Bristol · Supervised by Prof. Dima Damen · UKRI-funded"
   - dates: "Aug – Nov 2026"
     role: "Explainable AI Research Associate"
     org: "University of Bristol, in collaboration with Allianz"
@@ -65,36 +62,52 @@ experience:
     role: "Reviewer, ICLR 2026"
     org: "EPIC-Kitchens CVPR Challenge Coordinator (2025)"
 
-# Source: _pages/publications.md, paper project pages
+# Source: _pages/cv.md (Education). Institutions for the MSc/BEng aren't in the repo.
+education:
+  - dates: "2023 – 2027"
+    role: "PhD CDT Interactive AI"
+    org: "University of Bristol · Supervised by Prof. Dima Damen · UKRI-funded"
+  - dates: "2020 – 2021"
+    role: "MSc. Computational Finance"
+    org: "TODO: institution"
+  - dates: "2019 – 2020"
+    role: "MSc. Systems, Control & Signal Processing"
+    org: "TODO: institution"
+  - dates: "2016 – 2019"
+    role: "BEng Electromechanical Engineering"
+    org: "TODO: institution"
+
+# Source: _pages/publications.md (author, venue and link wording kept as-is).
+# "O Emara" in the author list is highlighted automatically.
 publications:
-  - venue: "CVPR 2026 Workshops (MULA)"
+  - venue: "CVPR Multimodal Learning and Applications Workshop (2026)"
     title: "Segmenting Collision Sound Sources in Egocentric Videos"
-    authors_before: "Kranti Kumar Parida,"
-    authors_after: ", Hazel Doughty, Dima Damen"
+    authors: "K Parida, O Emara, H Doughty, D Damen"
     takeaway: "Given a collision sound, find which objects in the video made it, even in cluttered first-person footage."
     image: /images/teasers/cs3.jpg
     image_alt: "Teaser figure for Collision Sound Source Segmentation"
     links:
+      - label: "Webpage"
+        url: "https://krantiparida.github.io/projects/cs3.html"
       - label: "Paper"
         url: "https://openaccess.thecvf.com/content/CVPR2026W/MULA2026/papers/Parida_Segmenting_Collision_Sound_Sources_in_Egocentric_Video_CVPRW_2026_paper.pdf"
       - label: "Code"
         url: "https://github.com/krantiparida/collision-sound-source-segmentation"
-      - label: "Project page"
-        url: "https://krantiparida.github.io/projects/cs3.html"
-  - venue: "CVPR 2025"
+  - venue: "IEEE/CVF Computer Vision and Pattern Recognition (CVPR) (2025)"
     title: "HD-EPIC: A Highly-Detailed Egocentric Video Dataset"
-    authors_before: "Toby Perrett, Ahmad Darkhalil, Saptarshi Sinha,"
-    authors_after: ", Sam Pollard, Kranti Parida, … Hazel Doughty, Dima Damen (19 authors)"
+    authors: "T Perrett, A Darkhalil, S Sinha, O Emara, S Pollard, K Parida, K Liu, P Gatti, S Bansal, K Flanagan, J Chalk, Z Zhu, R Guerrier, F Abdelazim, B Zhu, D Moltisanti, M Wray, H Doughty, D Damen"
     takeaway: "A benchmark that shows how far today's vision-language models are from understanding real, unscripted kitchen video."
     image: /images/teasers/hd-epic.png
     image_alt: "HD-EPIC dataset preview"
     links:
       - label: "Paper"
         url: "https://arxiv.org/abs/2502.04144"
+      - label: "Webpage"
+        url: "https://hd-epic.github.io/"
       - label: "Annotations"
         url: "https://github.com/hd-epic/hd-epic-annotations"
-      - label: "Project page"
-        url: "https://hd-epic.github.io/"
+      - label: "Explore Dataset"
+        url: "https://hd-epic.github.io/demo.html"
 
 contact:
   title: "Working on video or multimodal ML?"
