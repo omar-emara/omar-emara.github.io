@@ -1,0 +1,21 @@
+---
+layout: default
+title: "CV"
+permalink: /cv-pdf/
+author_profile: false
+---
+{% include base_path %}
+{% assign pdf = site.data.home.cv_pdf | prepend: base_path %}
+<main id="main" class="cv-pdf wrap">
+  <div class="cv-pdf__head">
+    <h1>{{ site.author.name }} – CV</h1>
+    <div class="btn-row">
+      <a class="b b--primary" href="{{ pdf }}" download>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download PDF</a>
+      <a class="b" href="{{ pdf }}" target="_blank" rel="noopener">Open in new tab</a>
+    </div>
+  </div>
+  <object class="cv-pdf__viewer" data="{{ pdf }}" type="application/pdf" aria-label="{{ site.author.name }} CV (PDF)">
+    <p class="cv-pdf__fallback">This browser can't show the PDF here. <a href="{{ pdf }}" download>Download the CV</a> instead.</p>
+  </object>
+</main>

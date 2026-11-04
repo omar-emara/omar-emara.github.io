@@ -15,7 +15,9 @@ intro: >-
 
 # TODO: files/Omar_Emara_CV.pdf is currently a blank placeholder page.
 # Replace it with your real CV (keep the same filename).
+# The "View CV" buttons open cv_page, which shows the PDF with a download button.
 cv_pdf: /files/Omar_Emara_CV.pdf
+cv_page: /cv-pdf/
 
 photo: /images/profile-hero.jpg
 
@@ -29,53 +31,52 @@ themes:
     text: "2+ years as a machine learning specialist at Crossflow Payments (FinTech), and now explainable AI research in collaboration with Allianz."
     todo: "TODO: add one concrete outcome (what you built and its impact)."
 
-# Source: _pages/cv.md (Work experience), _pages/academicservice.md
+# Source: _pages/cv.md "Work experience", copied word for word
+# (each line is split into role / organisation / dates, nothing reworded).
 experience:
-  - dates: "Aug – Nov 2026"
+  - dates: "August – November 2026"
     role: "Explainable AI Research Associate"
-    org: "University of Bristol, in collaboration with Allianz"
+    org: "University of Bristol (in collaboration with Allianz)"
     impact: "TODO: one-line outcome"
-  - dates: "May – Jul 2025"
+  - dates: "May - July 2025"
     role: "AI Course Development Assistant"
     org: "University of Bristol"
-  - dates: "Sep 2024 – present"
+  - dates: "September 2024 - ongoing"
     role: "Teaching Assistant"
     org: "University of Bristol"
-  - dates: "Oct 2023 – Oct 2025"
+  - dates: "October 2023 - October 2025"
     role: "Widening Participation Tutor"
     org: "University of Bristol"
-  - dates: "May – Aug 2023"
+  - dates: "May - August 2023"
     role: "Machine Learning Research Assistant"
     org: "University of Southampton"
     impact: "TODO: research topic / one-line outcome"
-  - dates: "Oct 2020 – Feb 2023"
+  - dates: "October 2020 - February 2023"
     role: "Machine Learning Specialist"
-    org: "Crossflow Payments, London · FinTech startup"
+    org: "Crossflow Payments, London"
     impact: "TODO: what you built and its impact"
-  - dates: "Jun – Aug 2019"
+  - dates: "June - August 2019"
     role: "Signal Processing Research Assistant"
     org: "University of Southampton"
-  - dates: "Aug – Sep 2018"
+  - dates: "August - September 2018"
     role: "Robotics and Motion Intern"
     org: "ABB, Cairo"
-  - dates: "Service"
+  # Source: _pages/academicservice.md, word for word
+  - dates: "Academic Services"
     role: "Reviewer, ICLR 2026"
-    org: "EPIC-Kitchens CVPR Challenge Coordinator (2025)"
+    org: "EPIC Kitchens CVPR Challenge Coordinator (2025)"
 
-# Source: _pages/cv.md (Education). Institutions for the MSc/BEng aren't in the repo.
+# Source: _pages/cv.md "Education", copied word for word
+# (each line is split into degree / dates, nothing reworded or added).
 education:
-  - dates: "2023 – 2027"
+  - dates: "2023-2027"
     role: "PhD CDT Interactive AI"
-    org: "University of Bristol · Supervised by Prof. Dima Damen · UKRI-funded"
-  - dates: "2020 – 2021"
+  - dates: "2020-2021"
     role: "MSc. Computational Finance"
-    org: "TODO: institution"
-  - dates: "2019 – 2020"
+  - dates: "2019-2020"
     role: "MSc. Systems, Control & Signal Processing"
-    org: "TODO: institution"
-  - dates: "2016 – 2019"
+  - dates: "2016-2019"
     role: "BEng Electromechanical Engineering"
-    org: "TODO: institution"
 
 # Source: _pages/publications.md (author, venue and link wording kept as-is).
 # "O Emara" in the author list is highlighted automatically.
