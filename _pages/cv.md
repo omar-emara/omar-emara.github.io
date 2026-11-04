@@ -18,11 +18,13 @@ Education
 
 Work experience
 ======
+* Explainable AI Research Associate, University of Bristol (in collaboration with Allianz), August – November 2026
+
 * AI Course Development Assistant, University of Bristol, May - July 2025
 
 * Teaching Assistant, University of Bristol, September 2024 - ongoing
 
-* WP Tutor, University of Bristol, October 2023 - ongoing
+* Widening Participation Tutor, University of Bristol, October 2023 - October 2025
 
 * Machine Learning Research Assistant, University of Southampton, May - August 2023
 
@@ -37,14 +39,13 @@ Work experience
 Skills
 ======
 * Multimodal Learning
-* Computer vision
+* Self Supervised Learning
 * Machine Learning
 * Deep Learning
 * Python
 * Data Science
 * Pytorch
-* Data structure and algorithms
-* NLP
+* Data Structure and Algorithms
 * XAI
 
 <!-- Publications
