@@ -16,7 +16,7 @@ $rd-pill-bg: #ECFDF5;
 $rd-pill-text: #065F46;
 $rd-heading: "Inter Tight", "Inter", system-ui, sans-serif;
 $rd-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-$rd-max: 1120px;
+$rd-max: 1280px; // was 1120px (width trial)
 
 /* ---- Global ------------------------------------------------------------ */
 
@@ -132,12 +132,15 @@ a:focus-visible { outline: 2px solid $rd-accent; outline-offset: 2px; }
 
   &__text { flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
   &__name { font-size: 64px; line-height: 1.05; letter-spacing: -0.02em; font-weight: 700; }
-  &__pitch { max-width: 640px; font-family: $rd-heading; font-size: 28px; line-height: 1.3; font-weight: 500; color: #1E293B; }
-  &__intro { max-width: 620px; font-size: 17px; line-height: 1.6; color: $rd-text-2; }
+  &__pitch { max-width: 720px; font-family: $rd-heading; font-size: 28px; line-height: 1.3; font-weight: 500; color: #1E293B; }
+  &__intro {
+    max-width: 700px; font-size: 17px; line-height: 1.6; color: $rd-text-2;
+    p + p { margin-top: 12px; }
+  }
   .btn-row { padding-top: 8px; }
 
   &__photo {
-    flex: 1 1 240px; max-width: 320px; width: 100%; height: auto;
+    flex: 1 1 240px; max-width: 360px; width: 100%; height: auto;
     aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%;
     border-radius: 16px; background: $rd-border;
   }
@@ -159,7 +162,7 @@ a:focus-visible { outline: 2px solid $rd-accent; outline-offset: 2px; }
   p { font-size: 15px; line-height: 1.6; color: $rd-text-2; }
 }
 
-#experience, #education { padding-top: 72px; padding-bottom: 72px; gap: 24px; }
+#experience, #teaching, #education { padding-top: 72px; padding-bottom: 72px; gap: 24px; }
 #education { padding-top: 0; }
 .xp {
   display: flex; flex-direction: column;
@@ -186,17 +189,24 @@ a:focus-visible { outline: 2px solid $rd-accent; outline-offset: 2px; }
 }
 
 .pub {
-  display: flex; flex-wrap: wrap; gap: 24px;
+  display: flex; flex-direction: column; gap: 20px;
   padding-bottom: 32px; border-bottom: 1px solid $rd-border;
   &:last-child { padding-bottom: 0; border-bottom: 0; }
 
+  /* Every paper gets the same full-width figure band of fixed height above
+     its details; the figure is scaled to fit and centred, whatever its shape. */
   &__teaser {
-    flex: 0 0 240px; max-width: 100%; height: 135px; box-sizing: border-box;
-    object-fit: contain; border-radius: 10px; background: #fff; border: 1px solid $rd-border;
-    &--empty { display: flex; align-items: center; justify-content: center; font-size: 13px; }
+    width: 100%; height: 260px; min-width: 0;
+    box-sizing: border-box; padding: 16px; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 10px; background: #fff; border: 1px solid $rd-border;
+    transition: border-color .15s;
+    img { display: block; width: 100%; height: 100%; object-fit: contain; }
+    &:hover { border-color: $rd-accent; }
+    &--empty { font-size: 13px; }
   }
   &__body {
-    flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 8px;
+    min-width: 0; display: flex; flex-direction: column; gap: 8px;
     h3 { font-size: 20px; line-height: 1.35; }
   }
   &__venue { font-size: 13px; font-weight: 600; color: $rd-accent; text-transform: uppercase; letter-spacing: 0.06em; }
@@ -221,12 +231,12 @@ a:focus-visible { outline: 2px solid $rd-accent; outline-offset: 2px; }
   .home-hero__pitch { font-size: 22px; }
   .home-hero__photo { max-width: 260px; }
   .home .section-title { font-size: 26px; }
-  .home .band > .wrap, #experience, #education { padding-top: 48px; padding-bottom: 48px; }
+  .home .band > .wrap, #experience, #teaching, #education { padding-top: 48px; padding-bottom: 48px; }
   #education { padding-top: 0; }
   .contact { padding: 32px 20px; }
   .contact__text h2 { font-size: 24px; }
   .xp__dates { flex-basis: 100%; }
-  .pub__teaser { flex-basis: 100%; height: auto; aspect-ratio: 16 / 9; }
+  .pub__teaser { height: auto; aspect-ratio: 16 / 9; padding: 12px; }
   .contact-wrap { padding-top: 48px; }
 }
 
@@ -274,3 +284,41 @@ a:focus-visible { outline: 2px solid $rd-accent; outline-offset: 2px; }
 }
 @media (max-width: 600px) { #academic-services { padding-top: 48px; } }
 .xp__body h3 .todo { margin-left: 6px; padding: 0 4px; }
+
+@media (max-width: 600px) {
+  /* On phones, keep wide figures legible: show them at 720px inside a frame
+     that swipes sideways (the page itself does not scroll sideways). */
+  .pub--wide .pub__teaser {
+    display: block; height: auto; aspect-ratio: auto; overflow-x: auto; -webkit-overflow-scrolling: touch;
+    img { width: 720px; max-width: none; }
+  }
+}
+
+/* When "What I work on" is hidden, Experience follows the hero directly. */
+.home-hero + #experience { padding-top: 16px; }
+
+/* Teaching sits right after the publications band; Academic Services follows it. */
+#teaching + #academic-services { padding-top: 0; }
+#education + #teaching { padding-top: 0; }
+
+/* Award badge on a publication (set `award:` in _data/home.yml) */
+.pub__award {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border-radius: 999px;
+  background: #FEF3C7; color: #92400E; font-size: 13px; font-weight: 600; line-height: 1.4;
+  svg { flex: none; }
+}
+
+/* Modules taught (Teaching section) */
+.modules {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 8px;
+  &__label { font-size: 13px; font-weight: 600; color: $rd-text-2; }
+  &__list {
+    display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none;
+    li {
+      margin: 0; padding: 4px 10px; border-radius: 999px;
+      background: $rd-band; border: 1px solid $rd-border;
+      font-size: 13px; font-weight: 500; line-height: 1.4; color: $rd-text-3;
+    }
+  }
+}

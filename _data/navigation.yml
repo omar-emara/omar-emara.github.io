@@ -1,13 +1,17 @@
 # Top navigation (rendered by _includes/site-header.html on every page)
 main:
-  - title: "Research"
-    url: /#research
+  # Hidden while the "What I work on" section is commented out in _data/home.yml
+  # - title: "Research"
+  #   url: /#research
+
+  - title: "Publications"
+    url: /#publications
 
   - title: "Experience"
     url: /#experience
 
-  - title: "Publications"
-    url: /#publications
+  - title: "Teaching"
+    url: /#teaching
 
   - title: "Academic Services"
     url: /#academic-services

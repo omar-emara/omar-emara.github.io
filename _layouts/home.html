@@ -4,7 +4,7 @@ layout: compress
 {% include base_path %}
 {% assign h = site.data.home %}
 {% assign a = site.author %}
-{% assign cv_url = h.cv_page | prepend: base_path %}{% assign cv_label = "View CV" %}
+{% assign cv_url = h.cv_pdf | prepend: base_path %}{% assign cv_label = "View CV" %}
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
   <head>
@@ -23,7 +23,7 @@ layout: compress
           {% endif %}
           <h1 class="home-hero__name">{{ a.name }}</h1>
           <p class="home-hero__pitch">{{ h.pitch }}</p>
-          <p class="home-hero__intro">{{ h.intro }}</p>
+          <div class="home-hero__intro">{{ h.intro | markdownify }}</div>
           <div class="btn-row">
             <a class="b b--primary" href="{{ cv_url }}" target="_blank" rel="noopener">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>{{ cv_label }}</a>
@@ -36,6 +36,7 @@ layout: compress
         <img class="home-hero__photo" src="{{ base_path }}{{ h.photo }}" alt="Portrait of {{ a.name }}" width="720" height="971">
       </section>
 
+      {% if h.themes %}
       <section id="research" class="band">
         <div class="wrap stack">
           <h2 class="section-title">What I work on</h2>
@@ -50,9 +51,38 @@ layout: compress
           </div>
         </div>
       </section>
+      {% endif %}
+
+      <section id="publications" class="band">
+        <div class="wrap stack">
+          <div class="section-head">
+            <h2 class="section-title">Publications</h2>
+            <a class="arrow-link" href="{{ base_path }}/publications/">All publications<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
+          </div>
+          {% for p in h.publications %}
+          <article class="pub{% if p.teaser_layout == 'wide' %} pub--wide{% endif %}">
+            {% if p.image %}
+            <a class="pub__teaser" href="{{ base_path }}{{ p.image }}" target="_blank" rel="noopener" title="Open full-size figure"><img src="{{ base_path }}{{ p.image }}" alt="{{ p.image_alt }}" loading="lazy"></a>
+            {% else %}
+            <div class="pub__teaser pub__teaser--empty todo">TODO: teaser figure</div>
+            {% endif %}
+            <div class="pub__body">
+              <p class="pub__venue">{{ p.venue }}</p>
+              {% if p.award %}<p class="pub__award"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>{{ p.award }}</p>{% endif %}
+              <h3>{{ p.title }}</h3>
+              <p class="pub__authors">{{ p.authors | replace: "O Emara", "<strong>O Emara</strong>" }}</p>
+              <p class="pub__takeaway">{{ p.takeaway }}</p>
+              <div class="btn-row btn-row--sm">
+                {% for l in p.links %}{% assign first = l.url | slice: 0 %}<a class="b b--sm" href="{% if first == "/" %}{{ base_path }}{% endif %}{{ l.url }}">{{ l.label }}</a>{% endfor %}
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
 
       <section id="experience" class="wrap stack">
-        <h2 class="section-title">Experience</h2>
+        <h2 class="section-title">Work experience</h2>
         <div class="xp">
           {% for x in h.experience %}
           <div class="xp__row">
@@ -81,32 +111,28 @@ layout: compress
         </div>
       </section>
 
-      <section id="publications" class="band">
-        <div class="wrap stack">
-          <div class="section-head">
-            <h2 class="section-title">Selected publications</h2>
-            <a class="arrow-link" href="{{ base_path }}/publications/">All publications<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg></a>
-          </div>
-          {% for p in h.publications %}
-          <article class="pub">
-            {% if p.image %}
-            <img class="pub__teaser" src="{{ base_path }}{{ p.image }}" alt="{{ p.image_alt }}" loading="lazy">
-            {% else %}
-            <div class="pub__teaser pub__teaser--empty todo">TODO: teaser figure</div>
-            {% endif %}
-            <div class="pub__body">
-              <p class="pub__venue">{{ p.venue }}</p>
-              <h3>{{ p.title }}</h3>
-              <p class="pub__authors">{{ p.authors | replace: "O Emara", "<strong>O Emara</strong>" }}</p>
-              <p class="pub__takeaway">{{ p.takeaway }}</p>
-              <div class="btn-row btn-row--sm">
-                {% for l in p.links %}<a class="b b--sm" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+      {% if h.teaching %}
+      <section id="teaching" class="wrap stack">
+        <h2 class="section-title">Teaching</h2>
+        <div class="xp">
+          {% for x in h.teaching %}
+          <div class="xp__row">
+            <p class="xp__dates">{{ x.dates }}</p>
+            <div class="xp__body">
+              <h3>{{ x.role }}</h3>
+              <p>{{ x.org }}</p>
+              {% if x.modules %}
+              <div class="modules">
+                <span class="modules__label">Modules</span>
+                <ul class="modules__list">{% for m in x.modules %}<li>{{ m }}</li>{% endfor %}</ul>
               </div>
+              {% endif %}
             </div>
-          </article>
+          </div>
           {% endfor %}
         </div>
       </section>
+      {% endif %}
 
       <section id="academic-services" class="wrap stack">
         <h2 class="section-title">Academic Services</h2>

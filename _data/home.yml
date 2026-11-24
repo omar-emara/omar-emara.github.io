@@ -2,91 +2,112 @@
 # Any value starting with "TODO" is shown highlighted in yellow on the page so it
 # can't be missed. Replace it with real text, or delete the field to hide it.
 
-status: "TODO: Open to ML research & engineering roles from [MONTH YEAR]"
+status: "Open to PhD research placements from January 2027 and permanent research roles from October 2027"
 
-pitch: "I build multimodal models that combine vision, audio and language to understand video."
+# pitch: "I build multimodal models that combine vision, audio and language to understand video."
+pitch: "I develop multimodal models that learn more robust cross-modal representations in the presence of noise"
 
-# Source: _pages/about.md
-intro: >-
-  Final-year PhD student at the University of Bristol, supervised by
-  <a href="https://dimadamen.github.io/contact.html">Prof. Dima Damen</a> and funded by UKRI.
-  I also have 3 years of applied ML experience, as a machine learning specialist
-  at a FinTech startup and as a research assistant in academia.
+# Source: _pages/about.md. Written in Markdown: [text](link) makes a link,
+# and a blank line starts a new paragraph.
+# I am a final year PhD student supervised by [Professor Dima Damen](https://dimadamen.github.io/contact.html), [Dr Hazel Doughty](https://hazeldoughty.github.io/) and [Dr Nan Lu](https://scholar.google.com/citations?user=KQUQlG4AAAAJ&hl=en). My research is focused on improving alignment of modalities in self supervised contrastive multimodal learning to improve video understanding downstream tasks.
+
+intro: |
+  I am a PhD researcher in Interactive AI at the University of Bristol, specialising in multimodal representation learning, with a focus on audio-visual learning and video understanding. My research investigates how self-supervised contrastive learning can improve cross-modal alignment, enabling models to learn richer and more robust representations. In particular, I am interested in addressing the challenges of partial semantic correspondence, with a broader goal of advancing multimodal learning methods that enable more effective understanding of complex mutlimodal interactions. My research has been published at CVPR. 
+
+  Beyond my core research, I have experience in explainable AI and LLM-based systems, including applied AI research in collaboration with Allianz. I combine academic research with practical experience developing and deploying machine learning systems for a startup before starting my PhD.
 
 # TODO: files/Omar_Emara_CV.pdf is currently a blank placeholder page.
 # Replace it with your real CV (keep the same filename).
-# The "View CV" buttons open cv_page, which shows the PDF with a download button.
+# The "View CV" buttons open this PDF directly in a new browser tab.
 cv_pdf: /files/Omar_Emara_CV.pdf
-cv_page: /cv-pdf/
 
 photo: /images/profile-hero.jpg
 
 # Sources: _publications, _pages/publications.md, _pages/cv.md
-themes:
-  - title: "Audio-visual learning"
-    text: "Segmenting the objects that made a collision sound in egocentric video, guided by the audio. Our weakly-supervised method beats competitive baselines by 3× and 4.7× mIoU on two new benchmarks."
-  - title: "Egocentric video understanding"
-    text: "HD-EPIC: 41 hours of unscripted kitchen video with highly detailed, 3D-grounded annotations and a 26K-question VQA benchmark on which Gemini Pro scores only 38.5%."
-  - title: "Applied ML in industry"
-    text: "2+ years as a machine learning specialist at Crossflow Payments (FinTech), and now explainable AI research in collaboration with Allianz."
-    todo: "TODO: add one concrete outcome (what you built and its impact)."
+# "What I work on" section: hidden for now. Uncomment the block below to show it
+# again (and the "Research" link in _data/navigation.yml).
+# themes:
+#   - title: "Audio-visual learning"
+#     text: "Segmenting the objects that made a collision sound in egocentric video, guided by the audio. Our weakly-supervised method beats competitive baselines by 3× and 4.7× mIoU on two new benchmarks."
+#   - title: "Egocentric video understanding"
+#     text: "HD-EPIC: 41 hours of unscripted kitchen video with highly detailed, 3D-grounded annotations and a 26K-question VQA benchmark on which Gemini Pro scores only 38.5%."
+#   - title: "Applied ML in industry"
+#     text: "2+ years as a machine learning specialist at Crossflow Payments (FinTech), and now explainable AI research in collaboration with Allianz."
+#     todo: "TODO: add one concrete outcome (what you built and its impact)."
 
 # Source: _pages/cv.md "Work experience", copied word for word
 # (each line is split into role / organisation / dates, nothing reworded).
 experience:
-  - dates: "August – November 2026"
+  - dates: "August 2026 – November 2026"
     role: "Explainable AI Research Associate"
     org: "University of Bristol (in collaboration with Allianz)"
-    impact: "TODO: one-line outcome"
-  - dates: "May - July 2025"
-    role: "AI Course Development Assistant"
+  - dates: "May 2025 - July 2025"
+    role: "Applied GenAI Course Development Research Associate"
     org: "University of Bristol"
-  - dates: "September 2024 - ongoing"
-    role: "Teaching Assistant"
-    org: "University of Bristol"
-  - dates: "October 2023 - October 2025"
-    role: "Widening Participation Tutor"
-    org: "University of Bristol"
-  - dates: "May - August 2023"
+  - dates: "May 2023 - August 2023"
     role: "Machine Learning Research Assistant"
     org: "University of Southampton"
-    impact: "TODO: research topic / one-line outcome"
+    # impact: "TODO: research topic / one-line outcome"
   - dates: "October 2020 - February 2023"
     role: "Machine Learning Specialist"
     org: "Crossflow Payments, London"
-    impact: "TODO: what you built and its impact"
-  - dates: "June - August 2019"
+    # impact: "TODO: what you built and its impact"
+  - dates: "June 2019 - August 2019"
     role: "Signal Processing Research Assistant"
     org: "University of Southampton"
-  - dates: "August - September 2018"
-    role: "Robotics and Motion Intern"
-    org: "ABB, Cairo"
+
+# Source: _pages/cv.md "Work experience" (teaching roles), copied word for word.
+# Shown near the bottom of the page, just before Academic Services.
+teaching:
+  - dates: "September 2024 - present"
+    role: "Teaching Assistant"
+    org: "University of Bristol"
+    modules:
+      - "Applied Deep Learning"
+      - "Machine Learning"
+      - "Data Science"
+      - "NLP"
+      - "Large Scale Data Engineering"
+  - dates: "October 2023 - October 2025"
+    role: "Widening Participation Tutor"
+    org: "University of Bristol"
 
 # Source: _pages/cv.md "Education", copied word for word.
 # Institution: University of Bristol for the PhD (from about.md / _config.yml).
 # The MSc and BEng institutions are not anywhere in the repo yet.
 education:
-  - dates: "2023-2027"
+  - dates: "2023-2027(Expected)"
     degree: "PhD CDT Interactive AI"
     institution: "University of Bristol"
   - dates: "2020-2021"
     degree: "MSc. Computational Finance"
-    institution: "TODO: institution"
+    institution: "King's College London"
   - dates: "2019-2020"
     degree: "MSc. Systems, Control & Signal Processing"
-    institution: "TODO: institution"
+    institution: "University of Southampton"
   - dates: "2016-2019"
     degree: "BEng Electromechanical Engineering"
-    institution: "TODO: institution"
+    institution: "University of Southampton"
 
 # Source: _pages/academicservice.md, word for word
 academic_services:
-  - "Reviewer, ICLR 2026"
-  - "EPIC Kitchens CVPR Challenge Coordinator (2025)"
+  - "ICLR Reviewer 2027"
+  - "EPIC Kitchens CVPR Challenge Coordinator 2025"
 
 # Source: _pages/publications.md (author, venue and link wording kept as-is).
 # "O Emara" in the author list is highlighted automatically.
 publications:
+  - venue: "Under review ICLR 2027"
+    title: "Not All Pairs Align: Caption-Guided Audio-Visual Contrastive Learning"
+    authors: "O Emara, N Lu, D Damen, H Doughty"
+    takeaway: "Given natural noise in real world data, how can text be used to better separate paired modalities that only partially align semantically?"
+    image: /images/teasers/cgaal-2x.png
+    image_alt: "Teaser figure for CGAAL"
+    # wide: on phones, show this figure larger in a frame that swipes sideways
+    teaser_layout: wide
+    links:
+      - label: "Paper"
+        url: "/files/not_all_pairs_align_preprint.pdf"
   - venue: "CVPR Multimodal Learning and Applications Workshop (2026)"
     title: "Segmenting Collision Sound Sources in Egocentric Videos"
     authors: "K Parida, O Emara, H Doughty, D Damen"
@@ -102,6 +123,7 @@ publications:
         url: "https://github.com/krantiparida/collision-sound-source-segmentation"
   - venue: "IEEE/CVF Computer Vision and Pattern Recognition (CVPR) (2025)"
     title: "HD-EPIC: A Highly-Detailed Egocentric Video Dataset"
+    award: "EgoVis Distinguished Paper Award"
     authors: "T Perrett, A Darkhalil, S Sinha, O Emara, S Pollard, K Parida, K Liu, P Gatti, S Bansal, K Flanagan, J Chalk, Z Zhu, R Guerrier, F Abdelazim, B Zhu, D Moltisanti, M Wray, H Doughty, D Damen"
     takeaway: "A benchmark that shows how far today's vision-language models are from understanding real, unscripted kitchen video."
     image: /images/teasers/hd-epic.png
@@ -117,5 +139,5 @@ publications:
         url: "https://hd-epic.github.io/demo.html"
 
 contact:
-  title: "Working on video or multimodal ML?"
-  text: "I'd like to hear about the problem. My CV has the full list of projects and publications."
+  title: "Working on multimodal Learning?"
+  text: "I'd like to hear about the problem. My CV goes into more detail on my projects and experience."

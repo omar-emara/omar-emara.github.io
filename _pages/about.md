@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
  
-I am a final year PhD student supervised by [Professor Dima Damen](https://dimadamen.github.io/contact.html) and funded by UKRI. My research is focused on addressing challenging problems in multimodal learning by using vision, audio and text to improve video understanding downstream tasks. 
+I am a final year PhD student supervised by [Professor Dima Damen](https://dimadamen.github.io/contact.html), Dr Hazel Doughty (https://hazeldoughty.github.io/) and Dr Nan Lu (https://scholar.google.com/citations?user=KQUQlG4AAAAJ&hl=en). My research is focused on addressing challenging problems in multimodal learning by using vision, audio and text to improve video understanding downstream tasks. 
 
-Moreover, I have experience working as an applied machine learning scientist in a FinTech startup and working as research assistant in academia for a total of 3 years. 
+Moreover, I have experience working as an applied machine learning scientist in the industry and as a research associate in academia.
 
 <!-- A data-driven personal website
 ======
