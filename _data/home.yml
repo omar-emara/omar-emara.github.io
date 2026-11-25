@@ -16,8 +16,7 @@ intro: |
 
   Beyond my core research, I have experience in explainable AI and LLM-based systems, including applied AI research in collaboration with Allianz. I combine academic research with practical experience developing and deploying machine learning systems for a startup before starting my PhD.
 
-# TODO: files/Omar_Emara_CV.pdf is currently a blank placeholder page.
-# Replace it with your real CV (keep the same filename).
+# To update the CV, replace files/Omar_Emara_CV.pdf (keep the same filename).
 # The "View CV" buttons open this PDF directly in a new browser tab.
 cv_pdf: /files/Omar_Emara_CV.pdf
 
