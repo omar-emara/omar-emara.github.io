@@ -107,7 +107,7 @@ publications:
     teaser_layout: wide
     links:
       - label: "Paper"
-        url: "/files/not_all_pairs_align_preprint.pdf"
+        url: "https://arxiv.org/abs/2611.32399"
   - venue: "CVPR Multimodal Learning and Applications Workshop (2026)"
     title: "Segmenting Collision Sound Sources in Egocentric Videos"
     authors: "K Parida, O Emara, H Doughty, D Damen"

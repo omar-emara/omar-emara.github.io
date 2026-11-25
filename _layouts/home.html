@@ -33,7 +33,8 @@ layout: compress
             {% if a.email %}<a class="b" href="mailto:{{ a.email }}">Email</a>{% endif %}
           </div>
         </div>
-        <img class="home-hero__photo" src="{{ base_path }}{{ h.photo }}" alt="Portrait of {{ a.name }}" width="720" height="971">
+        {% assign photo_webp = h.photo | split: "." | first | append: ".webp" %}{% assign has_webp = site.static_files | where: "path", photo_webp | size %}
+        <picture class="pic">{% if has_webp > 0 %}<source type="image/webp" srcset="{{ base_path }}{{ photo_webp }}">{% endif %}<img class="home-hero__photo" src="{{ base_path }}{{ h.photo }}" alt="Portrait of {{ a.name }}" width="720" height="971" fetchpriority="high" decoding="async"></picture>
       </section>
 
       {% if h.themes %}
@@ -62,7 +63,7 @@ layout: compress
           {% for p in h.publications %}
           <article class="pub{% if p.teaser_layout == 'wide' %} pub--wide{% endif %}">
             {% if p.image %}
-            <a class="pub__teaser" href="{{ base_path }}{{ p.image }}" target="_blank" rel="noopener" title="Open full-size figure"><img src="{{ base_path }}{{ p.image }}" alt="{{ p.image_alt }}" loading="lazy"></a>
+            <a class="pub__teaser" href="{{ base_path }}{{ p.image }}" target="_blank" rel="noopener" title="Open full-size figure">{% assign img_webp = p.image | split: "." | first | append: ".webp" %}{% assign has_webp = site.static_files | where: "path", img_webp | size %}<picture class="pic">{% if has_webp > 0 %}<source type="image/webp" srcset="{{ base_path }}{{ img_webp }}">{% endif %}<img src="{{ base_path }}{{ p.image }}" alt="{{ p.image_alt }}" loading="lazy" decoding="async"></picture></a>
             {% else %}
             <div class="pub__teaser pub__teaser--empty todo">TODO: teaser figure</div>
             {% endif %}

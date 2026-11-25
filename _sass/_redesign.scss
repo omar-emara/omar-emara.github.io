@@ -322,3 +322,6 @@ a:focus-visible { outline: 2px solid $rd-accent; outline-offset: 2px; }
     }
   }
 }
+
+/* <picture> wrappers add WebP versions without changing the layout */
+.pic { display: contents; }
